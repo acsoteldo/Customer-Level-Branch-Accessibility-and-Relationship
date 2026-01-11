@@ -1,4 +1,4 @@
-# Customer Level Branch Accessibility
+# Customer Level Branch Accessibility and Relationship
 Evaluate service accessibility, branch alignment, and client behavior at the customer level to support branch strategy.
 
 ## Getting Started: 
