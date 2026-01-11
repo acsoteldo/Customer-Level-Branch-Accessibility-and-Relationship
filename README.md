@@ -80,3 +80,6 @@ For any inquiries or feedback, please contact acsoteldo01@gmail.com.
 https://www12.statcan.gc.ca/census-recensement/2021/geo/sip-pis/boundary-limites/index2021-eng.cfm
 
 [^2]: Data Source: OpenStreetMap (OSM)
+
+[^3]: Data Source: City of Toronto Open Data Portal — Neighbourhood Boundaries
+https://open.toronto.ca/dataset/neighbourhoods/
