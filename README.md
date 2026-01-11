@@ -76,5 +76,7 @@ The level of data science and machine learning talent within an organization pos
 For any inquiries or feedback, please contact acsoteldo01@gmail.com.
 
 ## References
-[^1]: Data Source: Statistics Canada – 2021 Census Boundary Files
+[^1]: Data Source: Statistics Canada CMA Boundary
 https://www12.statcan.gc.ca/census-recensement/2021/geo/sip-pis/boundary-limites/index2021-eng.cfm
+
+[^2]: Data Source: OpenStreetMap (OSM)
