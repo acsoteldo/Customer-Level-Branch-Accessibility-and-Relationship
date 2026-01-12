@@ -1,5 +1,5 @@
 # Customer Level Branch Accessibility and Relationship
-Evaluate service accessibility, branch alignment, and client behavior at the customer level to support branch strategy.
+Evaluate branch accessibility, service proximity, and funding quality across Toronto’s metropolitan banking network.
 
 ## Getting Started: 
 1. Report and presentation
