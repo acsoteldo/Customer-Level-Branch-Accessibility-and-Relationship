@@ -38,7 +38,7 @@ The analysis will be based on the cleaned master dataset, which has 71 fields, i
 * top1_miles, top2_miles, top3_miles: distance to each branch
 * top1_minutes, top2_minutes, top3_minutes: estimated travel time
 
-Note: Branch accessibility metrics (distance and estimated travel time) are calculated using projected geometries (UTM Zone 17N) to ensure accurate distance measurements.
+Note: Branch accessibility metrics (distance and estimated travel time) are calculated using projected geometries (UTM Zone 17N) to ensure accurate distance measurements. Client-level geographic coordinates were aggregated to the neighbourhood level to preserve privacy and reflect responsible data governance practices.
   
 ## Problem Definition
 Although the Toronto metropolitan region is generally characterized by strong economic fundamentals and high financial inclusion, service accessibility and relationship depth are unevenly distributed across clients and neighborhoods. Differences in proximity to financial service locations, branch coverage, and digital adoption can materially affect client engagement, funding quality, and operational efficiency.
