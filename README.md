@@ -26,45 +26,42 @@ The analysis will be based on the cleaned master dataset, which has 71 fields, i
 * tenure_days: total relationship tenure in days
 * uses_mobile_banking: flag for active digital banking usage
 * avg_daily_txn_count: estimated average daily transaction volume per client
-* total_deposit_balance: total client deposit balance across all products
-* nidda_balance: non-interest deposit balance
-* ibb_balance: interest deposit balance
-* has_checking, has_savings, has_money_market, has_cd: product presence flags
+* branches_within_1km: count of major-bank branches within 1 km of the client's neighbourhood
 * has_credit_card: active credit card flag
 * total_products: total number of active products and services
 * primary_branch_id: customer’s most frequently used branch
 * primary_branch_in_top3: flag whether the primary branch is among the three closest branches
 * top1_branch_id, top2_branch_id, top3_branch_id: nearest branches by distance
-* top1_miles, top2_miles, top3_miles: distance to each branch
+* top1_km, top2_km, top3_km: distance to each branch
 * top1_minutes, top2_minutes, top3_minutes: estimated travel time
 
 Note: Branch accessibility metrics (distance and estimated travel time) are calculated using projected geometries (UTM Zone 17N) to ensure accurate distance measurements. Client-level geographic coordinates were aggregated to the neighbourhood level to preserve privacy and reflect responsible data governance practices.
   
 ## Problem Definition
-Although the Toronto metropolitan region is generally characterized by strong economic fundamentals and high financial inclusion, service accessibility and relationship depth are unevenly distributed across clients and neighborhoods. Differences in proximity to financial service locations, branch coverage, and digital adoption can materially affect client engagement, funding quality, and operational efficiency.
+Although the Toronto metropolitan region is generally characterized by strong economic fundamentals and high financial inclusion, service accessibility and relationship depth are unevenly distributed across clients and neighbourhoods. Differences in proximity to major bank branches, branch coverage density, and digital adoption can materially affect client engagement, funding quality, and operational efficiency.
 
 ### Relevance:
-Understanding how branch accessibility, service proximity, and client behavior translate into differences in relationship depth and funding quality is critical for several reasons:
-* Financial institutions and branch planners require client-level and neighborhood-aware insights to evaluate how physical accessibility and digital adoption influence engagement, product utilization, and branch performance, informing decisions around branch placement, consolidation, and staffing.
-* Wealth management and retail banking teams can use localized accessibility metrics to assess how distance and travel time impact client behavior, funding composition (NIDDA vs. interest-bearing balances), and reliance on self-service channels.
+Understanding how branch accessibility, service proximity, and client behaviour translate into differences in relationship depth and funding quality is critical for several reasons:
+* Financial institutions and branch planners require client-level and neighbourhood-aware insights to evaluate how physical accessibility and digital adoption influence engagement, product utilization, and branch performance, informing decisions around branch placement, consolidation, and staffing.
+* Wealth management and retail banking teams can use localized accessibility metrics to assess how distance and travel time impact client behaviour, funding composition (NIDDA vs. interest-bearing balances), and reliance on self-service channels.
 * Operational and strategy stakeholders may leverage integrated client, product, and geographic data to identify service gaps, underserved areas, and opportunities for targeted relationship management or digital enablement.
-* Analysts and decision-makers benefit from moving beyond aggregate branch metrics to develop more precise, client-centered models of service utilization, funding quality, and operational efficiency across a large metropolitan market.
+* Analysts and decision-makers benefit from moving beyond aggregate branch metrics to develop more precise, client-centred models of service utilization, funding quality, and operational efficiency across a large metropolitan market.
 
 ## Hypothesis
-Customers located farther from physical financial service locations or outside dense branch coverage areas exhibit greater reliance on digital channels, lower in-person service utilization, and variations in funding quality.
+Clients located farther from physical bank branches or outside dense branch coverage areas exhibit greater reliance on digital channels, lower in-person service utilization, and variations in funding quality.
 
 ## Vision
-To support data-driven, customer-centric decision-making in retail and wealth banking by revealing how service accessibility, branch proximity, and client behavior translate into differences in relationship depth, funding quality, and operational performance across a large metropolitan market.
+To support data-driven, client-centric decision-making in retail and wealth banking by revealing how service accessibility, branch proximity, and client behaviour translate into differences in relationship depth, funding quality, and operational performance across a large metropolitan market.
 
 ## Objective
-The primary objective of this analysis is to develop a comprehensive understanding of how branch accessibility, service proximity, and customer behavior shape relationship depth and funding quality across the Toronto metropolitan area. By integrating geographic service data with client-level behavioral and product metrics, this report aims to address the following objectives:
-* Visualize the spatial distribution of branch coverage and customer residence locations to identify areas with reduced physical access to in-person financial services.
-* Examine how customer engagement and digital adoption vary with distance and travel time to branches, highlighting patterns in service utilization across neighborhoods.
+The primary objective of this analysis is to develop a comprehensive understanding of how branch accessibility, service proximity, and client behaviour shape relationship depth and funding quality across the Toronto metropolitan area. By integrating geographic service data with client-level behavioural and product metrics, this report aims to address the following objectives:
+* Visualize the spatial distribution of branch coverage and client residence locations to identify areas with reduced physical access to in-person financial services.
+* Examine how client engagement and digital adoption vary with distance and travel time to branches, highlighting patterns in service utilisation across neighbourhoods.
 * Assess funding composition (NIDDA vs. interest-bearing balances) as a proxy for relationship quality, evaluating how deposit mix differs among clients with similar balances but differing accessibility profiles.
-* Identify customer segments and geographic areas where accessibility constraints and behavioral patterns intersect, highlighting opportunities for targeted branch strategy, staffing optimization, and digital enablement initiatives.
+* Identify client segments and geographic areas where accessibility constraints and behavioural patterns intersect, highlighting opportunities for targeted branch strategy, staffing optimisation, and digital enablement initiatives.
 
 ## Review of the Literature
-The level of data science and machine learning talent within an organization positively correlates with the adoption of ML technologies. As highlighted in the LinkedIn article, the modern process industry is driven by big data, which includes vast amounts of structured and unstructured data posing significant challenges in efficient data interpretation and management. National AI adoption trends indicate that sectors with high current AI usage will maintain their lead, while sectors such as Accommodation and Food Services exhibit lower adoption rates. The BTOS AI findings, consistent with the 2019 Annual Business Survey (ABS), show that sectors with higher adoption rates have more established practices and experienced talent. In the EdTech industry, machine learning is revolutionizing learning experiences through adaptive learning systems, content recommendation systems, and predictive analytics, contributing to market growth projections by 2027. Despite these advancements, CompTIA identifies barriers to AI adoption, including a lack of skilled professionals, unclear ROI metrics, and the complexity of AI systems. Addressing these barriers through targeted strategies and education can facilitate wider AI and ML adoption, leading to enhanced efficiency and competitiveness in organizations. Consequently, fostering skilled talent within organizations is essential for driving successful ML and AI integration across various industries.
+The relationship between branch accessibility and client behaviour is well documented. Research from the Bank of Canada finds that geographical proximity of bank branches materially affects household credit choice, with ongoing branch consolidation potentially reducing financial inclusion, particularly in culturally diverse neighbourhoods [^4]. This dynamic is central to the GTA context examined in this analysis. Branch networks in Canada have been contracting steadily. Physical branches declined from 5,890 in 2018 to approximately 5,656 by 2022, while in-person banking usage fell from 67% to 61% over the same period [^5]. Yet proximity remains relevant, 37% of new account journeys still conclude in-person [^6]. Digital adoption has accelerated alongside this contraction. 65% of Canadians now use mobile banking apps, with adoption highest among younger generations [^5]. Most major banks report the average client visits a branch once a quarter or less, limiting touchpoints even for multi-product clients [^7]. Engagement quality has direct financial implications. 71% of actively engaged clients are likely to remain with their bank long-term [^8], linking service accessibility to deposit stability and relationship depth, the core outcomes this project measures across GTA neighbourhoods.
 
 ## Key Insights
 * Across South Florida census tracts, flooding and hurricanes account for approximately 88% of total expected annual climate-related financial losses, confirming water-related hazards as the dominant driver of household financial risk in the region.
@@ -73,11 +70,10 @@ The level of data science and machine learning talent within an organization pos
 ![image](https://github.com/acsoteldo/Machine-Learning-Adoption-Across-Industries/assets/76544489/a5f8da18-98a8-490f-9fee-7e0dbdc8aece)
 
 ## Next Steps
-* Design industry-specific workshops to highlight the benefits and applications of machine learning in various sectors.
-* Organize events that promote collaboration and idea exchange among professionals to accelerate ML adoption within organizations.
-* Provide training programs in machine learning to help professionals enhance their skills, stay current with industry trends, and boost their career prospects.
-* Support regulations that encourage innovation while ensuring privacy, security, and fairness, fostering greater confidence in ML technologies.
-* Continuously use dataset insights to update and improve the educational sessions, ensuring they remain relevant and effective.
+* Extend the branch accessibility analysis to incorporate additional GTA municipalities beyond Toronto, increasing the proportion of Outside Toronto clients and improving neighbourhood-level representativeness.
+* Incorporate product-level origination dates into fact_cust_product to enable cohort analysis of product adoption over the client lifecycle.
+* Explore predictive modelling of deposit tier migration using coverage, digital adoption, and tenure as input features, transitioning the project from descriptive to prescriptive analytics.
+* Present findings to a simulated stakeholder audience to validate dashboard narrative clarity and identify gaps in the branch strategy and digital enablement story.
 
 ## Contact
 For any inquiries or feedback, please contact acsoteldo01@gmail.com.
@@ -91,3 +87,17 @@ https://open.toronto.ca/dataset/neighbourhoods/
 
 [^3]: Data Source: OpenStreetMap (OSM)
 
+[^4]: Geographical and Cultural Proximity in Retail Banking
+https://www.bankofcanada.ca/2023/01/staff-working-paper-2023-2/
+
+[^5]: Banking Industry Statistics in Canada
+https://madeinca.ca/banking-industry-statistics-canada/
+
+[^6]: The Future of the Branch
+https://bankingjournal.aba.com/2023/07/the-future-of-the-branch-what-can-banks-learn-from-luxury-retail-customer-experiences/
+
+[^7]: Digital Intelligence: Banks are evolving customer engagement strategies to recapture growth
+https://www.pwc.com/us/en/industries/financial-services/library/customer-engagement-strategy-evolution.html
+
+[^8]: Elevating Customer Engagement in Banking
+https://www.experian.com/blogs/insights/customer-engagement-banking/
