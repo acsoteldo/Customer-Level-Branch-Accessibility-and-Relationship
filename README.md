@@ -77,7 +77,7 @@ The relationship between branch accessibility and client behaviour is well docum
 <img width="2880" height="1738" alt="Data Project 13 Jan 2026 - Dashboard 2" src="https://github.com/user-attachments/assets/7f3dc5f8-de12-48b0-9ecd-c7b3182dfd8f" />
 
 ### Demo
-
+https://github.com/user-attachments/assets/a3a0ccb9-a4de-4ac2-9d44-e7b3682cf066
 
 ## Next Steps
 * Extend the branch accessibility analysis to incorporate additional GTA municipalities beyond Toronto, increasing the proportion of Outside Toronto clients and improving neighbourhood-level representativeness.
