@@ -64,10 +64,18 @@ The primary objective of this analysis is to develop a comprehensive understandi
 The relationship between branch accessibility and client behaviour is well documented. Research from the Bank of Canada finds that geographical proximity of bank branches materially affects household credit choice, with ongoing branch consolidation potentially reducing financial inclusion, particularly in culturally diverse neighbourhoods [^4]. This dynamic is central to the GTA context examined in this analysis. Branch networks in Canada have been contracting steadily. Physical branches declined from 5,890 in 2018 to approximately 5,656 by 2022, while in-person banking usage fell from 67% to 61% over the same period [^5]. Yet proximity remains relevant, 37% of new account journeys still conclude in-person [^6]. Digital adoption has accelerated alongside this contraction. 65% of Canadians now use mobile banking apps, with adoption highest among younger generations [^5]. Most major banks report the average client visits a branch once a quarter or less, limiting touchpoints even for multi-product clients [^7]. Engagement quality has direct financial implications. 71% of actively engaged clients are likely to remain with their bank long-term [^8], linking service accessibility to deposit stability and relationship depth, the core outcomes this project measures across GTA neighbourhoods.
 
 ## Key Insights
-* Across South Florida census tracts, flooding and hurricanes account for approximately 88% of total expected annual climate-related financial losses, confirming water-related hazards as the dominant driver of household financial risk in the region.
+* Among GTA clients with no nearby branch, mobile banking adoption reaches 91% compared to 53% in very high coverage areas, confirming physical inaccessibility as the primary driver of digital channel reliance rather than client preference.
+* Clients in the No Nearby Branch and Low Coverage (1–2) tiers collectively represent the largest share of the 5,000-client base yet consistently show the lowest average deposit balances, confirming that volume concentration at lower coverage tiers does not translate into proportionate funding quality.
+* Among clients with no nearby branch, 26% bypass closer alternatives to reach their primary branch, suggesting that advisor relationships and brand loyalty override proximity as the dominant drivers of branch selection in underserved areas.
+* Despite representing fewer than 100 clients, the Very High Coverage (10+) segment accounts for the highest average deposit balances in the $250K+ band.
+* Average daily transactions among clients with no nearby branch are 0.74 compared to 1.50 for high coverage clients, confirming that digital banking in low-access areas functions primarily as a transactional channel.
 
 ### Dashboard
-![image](https://github.com/acsoteldo/Machine-Learning-Adoption-Across-Industries/assets/76544489/a5f8da18-98a8-490f-9fee-7e0dbdc8aece)
+<img width="2880" height="1736" alt="Data Project 13 Jan 2026 - Dashboard 1" src="https://github.com/user-attachments/assets/566d1ce1-31a6-43ed-92c1-c8454c30fcb3" />
+<img width="2880" height="1738" alt="Data Project 13 Jan 2026 - Dashboard 2" src="https://github.com/user-attachments/assets/7f3dc5f8-de12-48b0-9ecd-c7b3182dfd8f" />
+
+### Demo
+
 
 ## Next Steps
 * Extend the branch accessibility analysis to incorporate additional GTA municipalities beyond Toronto, increasing the proportion of Outside Toronto clients and improving neighbourhood-level representativeness.
