@@ -65,6 +65,7 @@ The relationship between branch accessibility and client behaviour is well docum
 
 ## Key Insights
 **Based on synthetic client data for illustrative purposes only.**
+
 * Among GTA clients with no nearby branch, mobile banking adoption reaches 91% compared to 53% in very high coverage areas, confirming physical inaccessibility as the primary driver of digital channel reliance rather than client preference.
 * Clients in the No Nearby Branch and Low Coverage (1–2) tiers collectively represent the largest share of the 5,000-client base yet consistently show the lowest average deposit balances, confirming that volume concentration at lower coverage tiers does not translate into proportionate funding quality.
 * Among clients with no nearby branch, 26% bypass closer alternatives to reach their primary branch, suggesting that advisor relationships and brand loyalty override proximity as the dominant drivers of branch selection in underserved areas.
